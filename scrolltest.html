@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Scroll test</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+	
+<body>
+	<section id="blank">
+		<p> 
+			<br><br>
+			Thousands of mouths are fed each week by the university’s nine dining halls, 14 Sparty’s and a handful of other culinary projects. MSU Culinary Services sources food from nearly 400 vendors from as far as 600 miles away, according to a 2021 food procurement guide.
+			<br><br><br><br>
+		</p>
+	</section>
+	<section class="scroll">
+		<h1 id="testheader"> Scroll test</h1>
+		<p class="intro"> 
+			Thousands of mouths are fed each week by the university’s nine dining halls, 14 Sparty’s and a handful of other culinary projects. MSU Culinary Services sources food from nearly 400 vendors from as far as 600 miles away, according to a 2021 food procurement guide.
+			<br><br>
+			Much of the food is sourced locally. The majority of the baked goods in dining halls and Sparty’s, for example, are made by MSU Bakers, a campus bakery.
+			<br><br>
+			In the average week:
+		</p>
+	</section>
+	<article id="number">
+		<div id="combo">
+			<h2>149,653</h2>
+			<p>combo exchanges are redeemed</p>
+		</div>
+		<div id="ids">
+			<h2>115,388</h2>
+			<p> are swiped to enter dining halls</p>
+		</div>
+	</article>
+
+
+
+</body>
+</html>
+
+<script>
+  const testheader = document.getElementById('testheader');
+  const number = document.getElementById('number');
+
+  // Add a scroll event listener to the window
+  window.addEventListener('scroll', () => {
+    // Get the distance from the top of the viewport to the element
+    const rect = testheader.getBoundingClientRect();
+    if (rect.top <= 100) {
+      number.style.display = 'flex';
+    } else {
+      number.style.display = 'none';
+    }
+  });
+  window.addEventListener('load', () => {
+    message.style.display = 'none'; // Hide until scroll happens
+    observer.observe(target); // Start observing when page loads
+  });
+</script>
